@@ -1,5 +1,4 @@
 "use client"
-
 import AddToCartButton from "@/components/AddToCardButton"
 import ImageSlider from "@/components/ImageSlider"
 import MaxWidthWrapper from "@/components/MaxWidthWrapper"

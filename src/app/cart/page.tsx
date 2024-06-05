@@ -1,4 +1,4 @@
-"use Client"
+'use client'
 
 import { Button } from "@/components/ui/button"
 import { PRODUCT_CATEGORIES } from "@/config"
