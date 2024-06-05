@@ -76,7 +76,8 @@ const ImageSlider = ({ urls }: ImageSliderProps) => {
           <ChevronLeft className="h-4 w-4 bg-zinc-700" />{" "}
         </button>
       </div>
-
+      
+      //@ts-ignore
       <Swiper
         pagination={{
           renderBullet: (_, className) => {
