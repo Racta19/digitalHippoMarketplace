@@ -16,7 +16,12 @@ module.exports = withPlugins([withTM], {
     config.module.rules.push({
         test: /\.node$/,
         use: 'file-loader',
-      });
+    });
+    
+    config.module.rules.push({
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
+    });
 
     return config;
   },
