@@ -13,7 +13,6 @@ import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useForm } from 'react-hook-form';
 import {toast} from "sonner";
-import { ZodError } from "zod";
 
 const Page = () => {
     const searchParams = useSearchParams();

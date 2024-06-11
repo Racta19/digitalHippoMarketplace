@@ -65,22 +65,22 @@ var path_1 = __importDefault(require("path"));
 var payload_1 = __importDefault(require("payload"));
 var nodemailer_1 = __importDefault(require("nodemailer"));
 dotenv_1.default.config({
-    path: path_1.default.resolve(__dirname, "../.env")
+    path: path_1.default.resolve(__dirname, '../.env'),
 });
 var transporter = nodemailer_1.default.createTransport({
-    host: "smtp.resend.com",
+    host: 'smtp.resend.com',
     secure: true,
     port: 465,
     auth: {
-        user: "resend",
-        pass: process.env.RESEND_API_KEY
-    }
+        user: 'resend',
+        pass: process.env.RESEND_API_KEY,
+    },
 });
 var cached = global.payload;
 if (!cached) {
     cached = global.payload = {
         client: null,
-        promise: null
+        promise: null,
     };
 }
 var getPayloadClient = function () {
@@ -95,7 +95,7 @@ var getPayloadClient = function () {
             switch (_d.label) {
                 case 0:
                     if (!process.env.PAYLOAD_SECRET) {
-                        throw new Error("Payload secret is missing");
+                        throw new Error('PAYLOAD_SECRET is missing');
                     }
                     if (cached.client) {
                         return [2 /*return*/, cached.client];
@@ -103,8 +103,8 @@ var getPayloadClient = function () {
                     if (!cached.promise) {
                         cached.promise = payload_1.default.init(__assign({ email: {
                                 transport: transporter,
-                                fromAddress: "onboarding@resend.dev",
-                                fromName: "DigitalHippo"
+                                fromAddress: 'rohailomer14@gmail.com',
+                                fromName: 'DigitalHippo',
                             }, secret: process.env.PAYLOAD_SECRET, local: (initOptions === null || initOptions === void 0 ? void 0 : initOptions.express) ? false : true }, (initOptions || {})));
                     }
                     _d.label = 1;
